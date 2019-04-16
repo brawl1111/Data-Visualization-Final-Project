@@ -27,7 +27,7 @@ d3.csv("candy.csv", function(csv) {
 		realData.push(obj);
 	});
 
-	realData.splice(26,1); //removed mint kisses because i couldnt find a picture
+	//realData.splice(26,1); //removed mint kisses because i couldnt find a picture
 	realData.splice(13,1); //removed jolly_rancher_good_flavor because it didn't make sense
 	//console.log(realData);
 	globalData = realData;
@@ -64,12 +64,12 @@ d3.csv("candy.csv", function(csv) {
     	.append("pattern")
     	.attr("id", d => d.key)
     	.attr('patternUnits', 'userSpaceOnUse')
-    	.attr('width', 60)
-        .attr('height', 60)
+    	.attr('width', 50)
+        .attr('height', 50)
        .append("image")
         .attr("xlink:href", function(d) {return "pics/" + d.key + ".jpg"})
-        .attr('width', 60)
-        .attr('height', 60);
+        .attr('width', 50)
+        .attr('height', 50);
 
     var simulation = d3.forceSimulation(realData)
       .force("x", d3.forceX(function(d) { return xScale(d.value); }).strength(5))
@@ -125,6 +125,11 @@ d3.csv("candy.csv", function(csv) {
     	.attr("cy", d=>d.y);
 
 
+    	var realNames = {
+    		"Q6_Dots": "Dots",
+    		"Q6_Twix": "Twix",
+
+    	}
 
     
 });
