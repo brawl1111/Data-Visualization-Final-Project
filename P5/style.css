@@ -1,0 +1,32 @@
+#wrapper {
+	background-color: #ffafd2;
+}
+circle {
+	stroke: gray;
+	stroke-width: 1px;
+}
+div{
+	display:block;
+	padding: 0;
+	margin: 0;
+}
+body {
+	padding: 0;
+	margin: 0;
+}
+.whiteAxis line{
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.whiteAxis path{
+  stroke: white;
+  stroke-width: 3px;
+}
+
+.whiteAxis text{
+  fill: white;
+  font-weight: bold;
+  font: 100px;
+}  
+
